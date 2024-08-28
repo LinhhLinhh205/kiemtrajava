@@ -25,34 +25,34 @@ public class Main {
         System.out.println("5. Sua gia ban bia theo ma sach");
         System.out.println("6. Tinh tong gia tri cua sach");
         System.out.println("0. Thoat");
+        System.out.print("Ban chon:");
         chon = sc.nextInt();
+        
         switch (chon) {
             case 1:
                 ql.xuat();
                 break;
             case 2:
-                ql.laySpTruoc2015();
-                break;
-            case 3:
                 ql.timSp();
                 break;
-            case 4:
+            case 3:
                 ql.sapxep();
                 break;
-            case 5:
+            case 4:
                 System.out.print("Nhap ma sach can xoa:");
                 String masach = sc.nextLine();
                 ql.xoaMaSach(masach);
                 break;
-            case 6:
-                double tinhTong = ql.tinhTong();
-                System.out.println("Tong tri gia: " + tinhTong);
-            case 7:
+            case 5:
                 System.out.println("Nhap ma sach can sua gia ban:");
                 String maSach = sc.nextLine();
                 System.out.println("Nhap gia ban: ");
                 double giaBan = sc.nextDouble();
                 ql.suaGiaMaSach(maSach, giaBan);
+                break;
+            case 6:
+                double tinhTong = ql.tinhTong();
+                System.out.println("Tong tri gia: " + tinhTong);
                 break;
             case 0:
                 System.out.println("Thoat");

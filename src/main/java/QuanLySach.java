@@ -23,15 +23,11 @@ public class QuanLySach {
         ds.add(new Sach("KH015", "Lap trinhC#", 82000, 2015));
     }
 
-    public double xuat() {
-        double tong=0;
+    public void xuat() {
+        
         for (Sach sach : ds) {
-            System.out.println(sach);
-            tong+=sach.getGiaban();
-            return tong;
-                       
+            System.out.println(sach);                                  
         }   
-        return 0;
     }
 
     public void laySpTruoc2015() {
