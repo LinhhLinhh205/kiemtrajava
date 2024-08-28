@@ -29,14 +29,17 @@ public class QuanLySach {
         for (Sach sach : ds) {
             System.out.println(sach);
         }
+        
     }
 
-    public void laySpTruoc2015() {
+    public ArrayList<Sach> laySpTruoc2015() {
+        ArrayList<Sach> kq=new ArrayList<>();
         for (Sach sach : ds) {
             if (sach.getNamxuatban() < 2015) {
-                System.out.println(sach);
+                kq.add(sach);
             }
         }
+        return kq;
     }
 
     public void timSp() {

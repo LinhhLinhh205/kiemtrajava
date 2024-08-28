@@ -31,6 +31,7 @@ public class Main {
         switch (chon) {
             case 1:
                 ql.xuat();
+                ql.tinhTong();
                 break;
             case 2:
                 ql.timSp();
