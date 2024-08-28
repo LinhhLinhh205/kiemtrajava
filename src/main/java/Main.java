@@ -40,6 +40,7 @@ public class Main {
                 break;
             case 4:
                 System.out.print("Nhap ma sach can xoa:");
+                sc.nextLine();
                 String masach = sc.nextLine();
                 ql.xoaMaSach(masach);
                 break;

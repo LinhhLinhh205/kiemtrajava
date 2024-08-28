@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -24,10 +25,10 @@ public class QuanLySach {
     }
 
     public void xuat() {
-        
+
         for (Sach sach : ds) {
-            System.out.println(sach);                                  
-        }   
+            System.out.println(sach);
+        }
     }
 
     public void laySpTruoc2015() {
@@ -37,38 +38,50 @@ public class QuanLySach {
             }
         }
     }
-    public void timSp(){
-        for(Sach sach :ds){
-            if(sach.getTensach().startsWith("Lap trinh")){
+
+    public void timSp() {
+        for (Sach sach : ds) {
+            if (sach.getTensach().startsWith("Lap trinh")) {
                 System.out.println(sach);
             }
         }
     }
-    public void sapxep(){
+
+    public void sapxep() {
         ds.sort((sp1, sp2) -> Double.compare(sp1.getGiaban(), sp2.getGiaban()));
         System.out.println("Danh sach san pham sau khi sap xep ");
         for (Sach sv : ds) {
             System.out.println(sv);
         }
     }
-    public void xoaMaSach(String maSach){
-        ds.removeIf(sach->sach.getMasach().equals(maSach));
+
+    public void xoaMaSach(String maSach) {
+        Iterator<Sach> iterator = ds.iterator();
+        while (iterator.hasNext()) {
+            Sach sach = iterator.next();
+            if (sach.getMasach().equals(maSach)) {
+                iterator.remove();
+            }
+        }
+
     }
-    public void suaGiaMaSach(String maSach,double giaBan){
-        for(Sach sach:ds){
-            if(sach.getMasach().equals(maSach)){
+
+    public void suaGiaMaSach(String maSach, double giaBan) {
+        for (Sach sach : ds) {
+            if (sach.getMasach().equals(maSach)) {
                 sach.setGiaban(giaBan);
                 System.out.println("Da sua thanh cong");
                 return;
             }
         }
     }
-    public double tinhTong(){
-        double tong=0;
-        for(Sach sach:ds){
-            tong+=sach.getGiaban();
+
+    public double tinhTong() {
+        double tong = 0;
+        for (Sach sach : ds) {
+            tong += sach.getGiaban();
         }
-        return tong;        
+        return tong;
     }
 
 }
