@@ -45,7 +45,7 @@ public class QuanLySach {
         }
     }
     public void sapxep(){
-        ds.sort((sp1, sp2) -> Double.compare(sp2.getGiaban(), sp1.getGiaban()));
+        ds.sort((sp1, sp2) -> Double.compare(sp1.getGiaban(), sp2.getGiaban()));
         System.out.println("Danh sach san pham sau khi sap xep ");
         for (Sach sv : ds) {
             System.out.println(sv);
