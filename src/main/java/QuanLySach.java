@@ -58,7 +58,7 @@ public class QuanLySach {
         for(Sach sach:ds){
             if(sach.getMasach().equals(maSach)){
                 sach.setGiaban(giaBan);
-                System.out.println(sach);
+                System.out.println("Da sua thanh cong");
                 return;
             }
         }

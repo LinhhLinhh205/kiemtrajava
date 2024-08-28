@@ -44,9 +44,10 @@ public class Main {
                 ql.xoaMaSach(masach);
                 break;
             case 5:
-                System.out.println("Nhap ma sach can sua gia ban:");
+                System.out.print("Nhap ma sach can sua gia ban:");
                 String maSach = sc.nextLine();
-                System.out.println("Nhap gia ban: ");
+                sc.nextLine();
+                System.out.print("Nhap gia ban: ");
                 double giaBan = sc.nextDouble();
                 ql.suaGiaMaSach(maSach, giaBan);
                 break;
